@@ -12,3 +12,5 @@ export const RequestSchema = z.object({
         message: "Invalid date format"
     }).optional(),
 });
+
+export type Request = z.infer<typeof RequestSchema>;
