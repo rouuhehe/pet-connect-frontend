@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const Pet = z.object({
+export const PetSchema = z.object({
   id: z.number().int().positive(),
   name: z.string().min(1).max(100),
   species: z.string().min(1).max(50),
@@ -12,4 +12,4 @@ export const Pet = z.object({
   }),
 });
 
-export type Pet = z.infer<typeof Pet>;
+export type Pet = z.infer<typeof PetSchema>;
