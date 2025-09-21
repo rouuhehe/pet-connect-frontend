@@ -1,8 +1,10 @@
 import { z } from "zod";
 
+
+
 export const AdoptionStatusSchema = z.object({
-  id: z.number(),
-  petId: z.number(),
+  id: z.uuid(),
+  petId: z.uuid(),
   status: z.enum(["available", "in_progress", "adopted"]),
   updatedAt: z.iso.datetime(),
 });

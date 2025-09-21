@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const AdoptionCenterSchema = z.object({
-  id: z.number(),
+  id: z.uuid(),
   name: z.string(),
   address: z.string(),
   city: z.string(),
